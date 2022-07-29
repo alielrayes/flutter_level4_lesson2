@@ -9,9 +9,11 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double widthScreen = MediaQuery.of(context).size.width;
+
     return Scaffold(
       appBar: AppBar(
-        title: MediaQuery.of(context).size.width > 600
+        title: widthScreen > 600
             ? Text("web screen")
             : Text("mobile screen"),
       ),
